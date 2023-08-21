@@ -112,6 +112,41 @@ select job, sum(sal), avg(sal), max(sal), min(sal) from emp
 select deptno, count(*) 사원수, count(comm) 커미션 from emp
     group by deptno order by deptno asc;
 
+-- having 조건절
+-- : group by절이 사용되는 경우에 데이터 제한을 가하기 위해서 where 조건절
+--   대신에 having 조건절을 사용해야 한다.
+
+--Q1. 각 부서별(10,20,30) 평균급여 금액이 2000 이상인 부서만 출력하는 SQL문 작성?
+
+-- 1)각 부서별 평균급여 금액 출력
+select deptno, avg(sal) from emp group by deptno; 
+--30	1566.666666666666666666666666666666666667
+--20	2175
+--10	2916.666666666666666666666666666666666667
+
+--2) 평균급여 금액이 2000 이상인 부서만 출력
+select deptno, avg(sal) from emp group by deptno
+    where avg(sal) >= 2000;     -- 오류발생
+ 
+ -- group by절이 사용되는 경우에는 having 조건절을 사용해야 한다.   
+select deptno, avg(sal) from emp group by deptno
+    having avg(sal) >= 2000;
+    
+--Q2. 각 부서별(10,20,3) 최대급여 금액이 2900 이상인 부서만 출력하는 SQL문 작성?
+--1) 각 부서별 최대급여 금액 출력
+select deptno, max(sal) from emp group by deptno;
+--30	2850
+--20	3000
+--10	5000
+
+--2) 최대급여 금액이 2900 이상인 부서만 출력
+select deptno, max(sal) from emp group by deptno
+    where max(sal) >= 2900;    -- 오류발생
+
+ -- group by절이 사용되는 경우에는 having 조건절을 사용해야 한다. 
+select deptno, max(sal) from emp group by deptno
+    having max(sal) >= 2900;
+
 -- 230818 과제
 -- 1.
 SELECT ENAME
@@ -128,16 +163,3 @@ WHERE SAL = (
 	SELECT MAX(SAL)
 	FROM EMP
 )
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -4,7 +4,7 @@
 		"oracle_thin-18a061cb929-493ab8073a676296": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "localhost",
+			"name": "docker-oracle",
 			"save-password": true,
 			"configuration": {
 				"host": "localhost",

@@ -19,6 +19,9 @@
 					"@dbeaver-sid-service@": "SERVICE"
 				},
 				"auth-model": "oracle_native"
+			},
+			"custom-properties": {
+				"transaction.smart.commit": "true"
 			}
 		}
 	},

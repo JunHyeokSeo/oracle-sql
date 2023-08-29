@@ -59,6 +59,3 @@ begin
     dbms_output.put_line('사번  /  이름  /  부서명');
     dbms_output.put_line(vempno||'/'||vename||'/'||vdname);
 end;
-
-
-

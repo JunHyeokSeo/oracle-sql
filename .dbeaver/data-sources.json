@@ -4,7 +4,7 @@
 		"oracle_thin-18a061cb929-493ab8073a676296": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "docker-oracle",
+			"name": "OraclePractice",
 			"save-password": true,
 			"read-only": true,
 			"configuration": {

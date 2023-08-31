@@ -21,6 +21,7 @@
 				"auth-model": "oracle_native"
 			},
 			"custom-properties": {
+				"SQLEditor.outputPanel.autoShow": "false",
 				"transaction.smart.commit": "true"
 			}
 		}
